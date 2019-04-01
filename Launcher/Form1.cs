@@ -23,10 +23,6 @@ namespace Launcher
         private void Form1_Load(object sender, EventArgs e)
         {
             string sourceDirectory = @"c:\prueba";
-            
-            List<CheckBox> CheckBoxes = new List<CheckBox>();
-            List<Label> LabelsVersiones = new List<Label>();
-            List<Label> LabelsSizes = new List<Label>();
 
             comboBox1.SelectedIndex = comboBox1.Items.IndexOf("Normal");
             
@@ -45,53 +41,54 @@ namespace Launcher
                 //string[] filePaths = Directory.GetDirectories(folder);
 
                 string[] files = Directory.GetFiles(@"c:\prueba\", "*.exe", SearchOption.AllDirectories);
-                
+
                 //este lo usaremos cuando lo metamos en la carpeta definitica, las APPS irán en una carpeta llamada Apps
                 //string[] files = Directory.GetFiles(folder, "*.exe", SearchOption.AllDirectories);
-
+                MessageBox.Show (filePaths[0]);
+                
                 foreach (string currentFilePath in filePaths)
                 {
                     
                     cont++;
-                    
-                    CheckBox cb = new CheckBox();
-                    cb.Location = new System.Drawing.Point(15, 30 + cont * 30);
-                    //cb.Text = currentFilePath.Substring(sourceDirectory.Length+6);
-                    cb.Text = currentFilePath.Substring(sourceDirectory.Length + 1);
-                    cb.CheckAlign = ContentAlignment.MiddleLeft;
-                    cb.TextAlign = ContentAlignment.MiddleLeft;
-                    cb.AutoSize = true;
-                    CheckBoxes.Add(cb);
-                                     
+                    dataGridView1.Rows.Insert(cont - 1, false, currentFilePath.Substring(sourceDirectory.Length + 1));
+                                                         
                 }
                 //ahora vamos a insertar las versiones de los archivos
                 cont = 0;
                 foreach (string currentFile in files)
                 {
                     cont++;
-                    Label lb = new Label();
-                    Label lb2 = new Label();
-                    lb.Location = new System.Drawing.Point(200, 30 + cont * 30);
-                    lb2.Location = new System.Drawing.Point(300, 30 + cont * 30);
                     var pathToFile = Path.GetFullPath(currentFile);
                     var versionInfo = FileVersionInfo.GetVersionInfo(pathToFile);
-                    if (versionInfo.ProductVersion != "")
-                    {
-                        lb.Text = versionInfo.ProductVersion;
-                    }else if (versionInfo.FileVersion != "")
-                    {
-                        lb.Text = versionInfo.FileVersion;
-                    }else
-                    {
-                        lb.Text = "N/A";
-                    }
-                    
+                   
                     
                     FileInfo f = new FileInfo(pathToFile);
                     var sizeInfo = f.Length;
-                    lb2.Text = Math.Round(Convert.ToDouble(sizeInfo/1048576),0).ToString() + "Mb";
-                    LabelsVersiones.Add(lb);
-                    LabelsSizes.Add(lb2);
+
+                    if (versionInfo.ProductVersion != "")
+                    {
+                        dataGridView1.Rows[cont - 1].Cells["version"].Value = versionInfo.ProductVersion;
+                    }
+                    else if (versionInfo.FileVersion != "")
+                    {
+                        dataGridView1.Rows[cont - 1].Cells["version"].Value = versionInfo.FileVersion;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[cont - 1].Cells["version"].Value = "N/A";
+                    }
+
+                    dataGridView1.Rows[cont - 1].Cells["size"].Value = Math.Round(f.Length/1048576.00,2);
+
+                    /*recorrer grid
+                    foreach (DataGridViewRow row in dtaPagos.Rows)
+                    {
+                        MessageBox.Show(row.Cells["Pago"].Value.ToString());
+                        MessageBox.Show(row.Cells["Cantidad"].Value.ToString());
+                        MessageBox.Show(row.Cells["Observaciones"].Value.ToString());
+                    }
+                    */
+
                 }
             }
 
@@ -102,26 +99,12 @@ namespace Launcher
                 MessageBox.Show(ex.Message);
             }
             
-            foreach (CheckBox c in CheckBoxes) {
-                //this.Controls.Add(c);
-                panel1.Controls.Add(c);
-            }
-            foreach (Label l in LabelsVersiones)
-            {
-                //this.Controls.Add(l);
-                panel1.Controls.Add(l);
-            }
-            foreach (Label l2 in LabelsSizes)
-            {
-                //this.Controls.Add(l2);
-                panel1.Controls.Add(l2);
-            }
 
             foreach (DriveInfo drive in DriveInfo.GetDrives())
             {
                 if (drive.IsReady && drive.Name == @"C:\")
                 {
-                    int espacio = (int)Math.Round(Convert.ToDouble(drive.TotalFreeSpace / 1048576), 0);
+                    int espacio = (int)Math.Round(Convert.ToDouble(drive.TotalFreeSpace / 1048576), 2);
                     label6.Text = espacio.ToString() + "Mb";
                 }
  
@@ -205,12 +188,17 @@ namespace Launcher
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"c:\prueba\img\2.jpg");
+            //pictureBox1.Image = Image.FromFile(@"c:\prueba\img\2.jpg");
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"c:\prueba\img\1.jpg");
+            //pictureBox1.Image = Image.FromFile(@"c:\prueba\img\1.jpg");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show("pulsado" + dataGridView1.CurrentRow.Cells["size"].Value.ToString());
         }
     }
 }
