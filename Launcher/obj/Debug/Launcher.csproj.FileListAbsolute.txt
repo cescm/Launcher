@@ -11,10 +11,10 @@ C:\Source\c#\Launcher\Launcher\obj\Debug\Launcher.csprojAssemblyReference.cache
 C:\Src\C#\Launcher\Launcher\bin\Debug\Launcher.exe.config
 C:\Src\C#\Launcher\Launcher\bin\Debug\Launcher.exe
 C:\Src\C#\Launcher\Launcher\bin\Debug\Launcher.pdb
-C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.csprojAssemblyReference.cache
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.Form1.resources
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.Properties.Resources.resources
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.csproj.GenerateResource.cache
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.csproj.CoreCompileInputs.cache
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.exe
 C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.pdb
+C:\Src\C#\Launcher\Launcher\obj\Debug\Launcher.csprojAssemblyReference.cache
