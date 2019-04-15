@@ -40,28 +40,37 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Param = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.size = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Smode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Param = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 461);
+            this.button1.Location = new System.Drawing.Point(227, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -71,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(123, 461);
+            this.button2.Location = new System.Drawing.Point(343, 476);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -86,7 +95,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Normal",
             "Silenciosa"});
-            this.comboBox1.Location = new System.Drawing.Point(80, 397);
+            this.comboBox1.Location = new System.Drawing.Point(268, 439);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(118, 21);
             this.comboBox1.TabIndex = 2;
@@ -95,7 +104,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 369);
+            this.label1.Location = new System.Drawing.Point(280, 423);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 13);
             this.label1.TabIndex = 3;
@@ -130,7 +139,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(389, 8);
+            this.label5.Location = new System.Drawing.Point(7, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 13);
             this.label5.TabIndex = 10;
@@ -141,7 +150,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(524, 8);
+            this.label6.Location = new System.Drawing.Point(196, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 11;
@@ -151,7 +160,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(530, 8);
+            this.label7.Location = new System.Drawing.Point(202, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 12;
@@ -161,20 +170,31 @@
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(0, 532);
+            this.panel2.Location = new System.Drawing.Point(-1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(888, 30);
+            this.panel2.Size = new System.Drawing.Size(252, 30);
             this.panel2.TabIndex = 16;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(23, 8);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox1.Size = new System.Drawing.Size(141, 17);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Iniciar con Windows";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(12, 503);
+            this.label9.Location = new System.Drawing.Point(224, 354);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(194, 13);
             this.label9.TabIndex = 17;
@@ -185,7 +205,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(219, 503);
+            this.label10.Location = new System.Drawing.Point(431, 354);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(14, 13);
             this.label10.TabIndex = 18;
@@ -194,9 +214,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(689, 357);
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(540, 357);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(154, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -209,20 +230,21 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.check,
             this.aplicacion,
-            this.version,
-            this.Fecha,
-            this.size,
             this.Descrip,
+            this.size,
+            this.Fecha,
+            this.version,
+            this.Smode,
             this.Param,
-            this.Smode});
+            this.path});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(888, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(728, 351);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged);
             // 
             // panel1
@@ -232,16 +254,62 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(888, 351);
+            this.panel1.Size = new System.Drawing.Size(728, 351);
             this.panel1.TabIndex = 15;
             // 
-            // check
+            // panel3
             // 
-            this.check.FalseValue = "false";
-            this.check.HeaderText = "Sel";
-            this.check.Name = "check";
-            this.check.TrueValue = "true";
-            this.check.Width = 50;
+            this.panel3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(257, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(266, 30);
+            this.panel3.TabIndex = 17;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel4.Controls.Add(this.checkBox1);
+            this.panel4.Location = new System.Drawing.Point(529, 1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(198, 30);
+            this.panel4.TabIndex = 17;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(187, 390);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(115, 17);
+            this.checkBox2.TabIndex = 23;
+            this.checkBox2.Text = "Marcar Silenciosas";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(347, 390);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(132, 17);
+            this.checkBox3.TabIndex = 24;
+            this.checkBox3.Text = "Marcar No Silenciosas";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.panel4);
+            this.panel5.Controls.Add(this.panel2);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 508);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(728, 32);
+            this.panel5.TabIndex = 26;
             // 
             // aplicacion
             // 
@@ -252,12 +320,22 @@
             this.aplicacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.aplicacion.ToolTipText = "prueba";
             // 
-            // version
+            // Descrip
             // 
-            this.version.HeaderText = "Versión";
-            this.version.Name = "version";
-            this.version.ReadOnly = true;
-            this.version.Width = 80;
+            this.Descrip.HeaderText = "Descrip";
+            this.Descrip.Name = "Descrip";
+            this.Descrip.ReadOnly = true;
+            this.Descrip.Width = 280;
+            // 
+            // size
+            // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.size.DefaultCellStyle = dataGridViewCellStyle1;
+            this.size.HeaderText = "Tamaño (Mb)";
+            this.size.Name = "size";
+            this.size.ReadOnly = true;
+            this.size.Width = 95;
             // 
             // Fecha
             // 
@@ -266,22 +344,19 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Width = 70;
             // 
-            // size
+            // version
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.size.DefaultCellStyle = dataGridViewCellStyle1;
-            this.size.HeaderText = "Mb.";
-            this.size.Name = "size";
-            this.size.ReadOnly = true;
-            this.size.Width = 50;
+            this.version.HeaderText = "Versión";
+            this.version.Name = "version";
+            this.version.ReadOnly = true;
+            this.version.Width = 60;
             // 
-            // Descrip
+            // Smode
             // 
-            this.Descrip.HeaderText = "Descrip";
-            this.Descrip.Name = "Descrip";
-            this.Descrip.ReadOnly = true;
-            this.Descrip.Width = 300;
+            this.Smode.HeaderText = "Smode";
+            this.Smode.Name = "Smode";
+            this.Smode.ReadOnly = true;
+            this.Smode.Width = 50;
             // 
             // Param
             // 
@@ -290,22 +365,24 @@
             this.Param.ReadOnly = true;
             this.Param.Visible = false;
             // 
-            // Smode
+            // path
             // 
-            this.Smode.HeaderText = "Smode";
-            this.Smode.Name = "Smode";
-            this.Smode.ReadOnly = true;
+            this.path.HeaderText = "Path";
+            this.path.Name = "path";
+            this.path.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(888, 558);
+            this.ClientSize = new System.Drawing.Size(728, 540);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -314,13 +391,20 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Launcher";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,14 +427,20 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn check;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn aplicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn version;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn size;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descrip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Param;
+        private System.Windows.Forms.DataGridViewTextBoxColumn size;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn version;
         private System.Windows.Forms.DataGridViewTextBoxColumn Smode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Param;
+        private System.Windows.Forms.DataGridViewTextBoxColumn path;
     }
 }
 

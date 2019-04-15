@@ -1,0 +1,4 @@
+5,1
+01/01/2019
+aplicación para comprimir/descomprimir archivos
+/S
